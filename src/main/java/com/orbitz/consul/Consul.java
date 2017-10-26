@@ -386,7 +386,7 @@ public class Consul {
          */
         public Builder withHostAndPort(HostAndPort hostAndPort) {
             try {
-                this.url = new URL("http", hostAndPort.getHost(), hostAndPort.getPort(), "");
+                this.url = new URL("http", hostAndPort.getHostText(), hostAndPort.getPort(), "");
             } catch (MalformedURLException e) {
                 throw new RuntimeException(e);
             }
